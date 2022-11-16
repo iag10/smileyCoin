@@ -278,17 +278,18 @@ Value getaccount(const Array& params, bool fHelp)
         strAccount = (*mi).second.name;
     return strAccount;
 }
-
+//skipun
 Value sayhello(const Array& params, bool fHelp)
 {
-    if (fhelp || params.size() != 1)
+    if (fhelp || params.size() > 0) {
 	throw runtime_error(
 	    "says hello to you"
 	    + HelpExampleCli("sayhello", "\"tabby\"")
-    // Wallet comments
-    echo "Hello"
-}
-  
+        );
+    }
+    greeting = "Hello"
+    return greeting;
+}  
 Value getaddressesbyaccount(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
