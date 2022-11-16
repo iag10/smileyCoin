@@ -287,7 +287,7 @@ Value sayhello(const Array& params, bool fHelp)
 	    + HelpExampleCli("sayhello", "\"tabby\"")
         );
     }
-    greeting = "Hello"
+    greeting = "Hello";
     return greeting;
 }  
 Value getaddressesbyaccount(const Array& params, bool fHelp)
